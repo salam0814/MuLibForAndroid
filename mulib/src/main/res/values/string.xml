@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tips">提示</string>
+    <string name="succeed">成功</string>
+    <string name="warning">警告</string>
+    <string name="error">错误</string>
+</resources>

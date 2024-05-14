@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.prj.android.mulib.ToastActivity"
+    android:background="@color/main_background"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_top_bar"/>
+
+    <ScrollView
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:onClick="defaultToast"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:background="@drawable/btn_bg_default_ripple"
+                android:text="默认显示"
+                android:textColor="@color/white"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_toast_pram"
+                android:layout_marginTop="18dp"
+                android:padding="10dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="4dp"
+                    android:background="@drawable/btn_toast_pram_item">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="类型"/>
+
+
+                    <RadioGroup
+                        android:id="@+id/toastType"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:orientation="horizontal"
+                        android:gravity="center">
+
+
+                        <RadioButton
+                            android:id="@+id/toastTips"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="提示"
+                            android:checked="true"
+                            android:buttonTint="@color/main"
+                            android:gravity="center"/>
+
+
+                        <View
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"/>
+
+
+                        <RadioButton
+                            android:id="@+id/toastSucceed"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="成功"
+                            android:buttonTint="@color/main"
+                            android:gravity="center"
+                            android:layout_marginLeft="12dp"/>
+
+                        <View
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"/>
+
+                        <RadioButton
+                            android:id="@+id/toastWarning"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="警告"
+                            android:buttonTint="@color/main"
+                            android:gravity="center" />
+
+                        <View
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"/>
+
+
+
+                        <RadioButton
+                            android:id="@+id/toastError"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="错误"
+                            android:buttonTint="@color/main"
+                            android:gravity="center" />
+
+
+
+                    </RadioGroup>
+
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="4dp"
+                    android:layout_marginTop="26dp"
+                    android:background="@drawable/btn_toast_pram_item">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="位置"/>
+
+                    <RadioGroup
+                        android:id="@+id/toastAlign"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:orientation="horizontal"
+                        android:gravity="center">
+
+
+                        <RadioButton
+                            android:id="@+id/toastLeft"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="左"
+                            android:buttonTint="@color/main"
+                            android:gravity="center"/>
+
+
+                        <RadioButton
+                            android:id="@+id/toastTop"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="上"
+                            android:buttonTint="@color/main"
+                            android:gravity="center"
+                            android:layout_marginLeft="16dp"/>
+
+                        <View
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"/>
+
+                        <RadioButton
+                            android:id="@+id/toastCenter"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="中间"
+                            android:buttonTint="@color/main"
+                            android:checked="true"
+                            android:gravity="center" />
+
+                        <View
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"/>
+
+
+
+
+                        <RadioButton
+                            android:id="@+id/toastTBottom"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="下"
+                            android:buttonTint="@color/main"
+                            android:gravity="center" />
+
+
+                        <RadioButton
+                            android:id="@+id/toastRight"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="右"
+                            android:buttonTint="@color/main"
+                            android:gravity="center"
+                            android:layout_marginLeft="16dp"/>
+
+
+                    </RadioGroup>
+
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <Button
+                android:onClick="customToast"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:background="@drawable/btn_bg_default_ripple"
+                android:text="自定义显示"
+                android:layout_marginTop="18dp"
+                android:textColor="@color/white"/>
+
+
+        </LinearLayout>
+
+
+
+    </ScrollView>
+
+
+
+
+
+</LinearLayout>

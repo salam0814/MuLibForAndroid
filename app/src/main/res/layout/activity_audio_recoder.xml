@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.prj.android.mulib.AudioRecoderActivity"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_top_bar"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp">
+
+        <Button
+            android:id="@+id/btnPauseRecorder"
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_bg_default_ripple"
+            android:text="暂停"
+            android:layout_marginRight="12dp"
+            android:visibility="gone"
+            android:textColor="@color/white"/>
+
+        <Button
+            android:id="@+id/btnResumeRecorder"
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_bg_default_ripple"
+            android:text="继续录音"
+            android:visibility="gone"
+            android:layout_marginRight="12dp"
+            android:textColor="@color/white"/>
+
+        <Button
+            android:id="@+id/btnStartRecorder"
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:layout_weight="2"
+            android:background="@drawable/btn_bg_default_ripple"
+            android:text="开始录音"
+            android:textColor="@color/white"/>
+
+        <Button
+            android:id="@+id/btnStopRecorder"
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:layout_weight="2"
+            android:background="@drawable/btn_bg_default_ripple"
+            android:text="停止录音"
+            android:visibility="gone"
+            android:textColor="@color/white"/>
+
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/btnPlay"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="@drawable/btn_bg_default_ripple"
+        android:text="播放"
+        android:layout_margin="12dp"
+        android:textColor="@color/white"/>
+
+
+
+</LinearLayout>

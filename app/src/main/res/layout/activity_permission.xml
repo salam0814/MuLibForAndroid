@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.prj.android.mulib.PermissionActivity">
+
+    <include layout="@layout/layout_top_bar"/>
+
+    <Button
+        android:onClick="defaultP"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="@drawable/btn_bg_default_ripple"
+        android:text="默认显示"
+        android:layout_margin="12dp"
+        android:textColor="@color/white"/>
+
+
+</LinearLayout>
